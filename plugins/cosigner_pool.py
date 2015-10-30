@@ -24,10 +24,10 @@ import xmlrpclib
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 
-from electrum_dash import bitcoin, util
-from electrum_dash import transaction
-from electrum_dash.plugins import BasePlugin, hook
-from electrum_dash.i18n import _
+from electrum_boli import bitcoin, util
+from electrum_boli import transaction
+from electrum_boli.plugins import BasePlugin, hook
+from electrum_boli.i18n import _
 
 from electrum_boli_gui.qt.transaction_dialog import show_transaction
 
@@ -134,7 +134,7 @@ class Plugin(BasePlugin):
             self.send_button.hide()
 
     def cosigner_can_sign(self, tx, cosigner_xpub):
-        from electrum_dash.transaction import x_to_xpub
+        from electrum_boli.transaction import x_to_xpub
         xpub_set = set([])
         for txin in tx.inputs:
             for x_pubkey in txin['x_pubkeys']:

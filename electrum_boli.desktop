@@ -1,5 +1,5 @@
-# If you want electrum-dash to appear in a linux app launcher ("start menu"), install this by doing:
-# sudo desktop-file-install electrum_dash.desktop
+# If you want electrum-boli to appear in a linux app launcher ("start menu"), install this by doing:
+# sudo desktop-file-install electrum_boli.desktop
 
 [Desktop Entry]
 Comment=Lightweight Bolivarcoin Client

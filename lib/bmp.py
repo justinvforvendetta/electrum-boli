@@ -122,12 +122,12 @@ class BitMap(object):
   """class for drawing and saving simple Windows bitmap files"""
 
   LINE_SOLID  = 0
-  LINE_DASHED = 1
+  LINE_BOLIED = 1
   LINE_DOTTED = 2
-  LINE_DOT_DASH=3
-  _DASH_LEN = 12.0
+  LINE_DOT_BOLI=3
+  _BOLI_LEN = 12.0
   _DOT_LEN = 6.0
-  _DOT_DASH_LEN = _DOT_LEN + _DASH_LEN
+  _DOT_BOLI_LEN = _DOT_LEN + _BOLI_LEN
 
   def __init__( self, width, height,
                  bkgd = Color.WHITE, frgd = Color.BLACK ):

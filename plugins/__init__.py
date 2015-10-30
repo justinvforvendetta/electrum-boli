@@ -16,8 +16,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-import electrum_dash
-from electrum_dash.i18n import _
+import electrum_boli
+from electrum_boli.i18n import _
 
 descriptions = [
     {

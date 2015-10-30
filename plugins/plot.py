@@ -1,11 +1,11 @@
 from PyQt4.QtGui import *
-from electrum_dash.plugins import BasePlugin, hook
-from electrum_dash.i18n import _
+from electrum_boli.plugins import BasePlugin, hook
+from electrum_boli.i18n import _
 
 
 import datetime
-from electrum_dash.util import format_satoshis
-from electrum_dash.bitcoin import COIN
+from electrum_boli.util import format_satoshis
+from electrum_boli.bitcoin import COIN
 
 
 try:
@@ -105,7 +105,7 @@ class Plugin(BasePlugin):
         ax.add_artist(anchored_box)
 
 
-        plt.ylabel('mDASH')
+        plt.ylabel('mBOLI')
         plt.xlabel('Dates')
         xfmt = md.DateFormatter('%Y-%m-%d')
         ax.xaxis.set_major_formatter(xfmt)

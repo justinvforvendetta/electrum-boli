@@ -23,12 +23,12 @@ import requests
 
 from PyQt4.QtGui import QMessageBox, QApplication, QPushButton
 
-from electrum_dash.account import BIP32_Account
-from electrum_dash import bitcoin, util
-from electrum_dash import transaction
-from electrum_dash.plugins import BasePlugin, hook
-from electrum_dash.i18n import _
-from electrum_dash.bitcoin import regenerate_key
+from electrum_boli.account import BIP32_Account
+from electrum_boli import bitcoin, util
+from electrum_boli import transaction
+from electrum_boli.plugins import BasePlugin, hook
+from electrum_boli.i18n import _
+from electrum_boli.bitcoin import regenerate_key
 
 
 

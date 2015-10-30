@@ -9,17 +9,17 @@ import re
 from PyQt4.Qt import QMessageBox, QDialog, QVBoxLayout, QLabel, QThread, SIGNAL, QGridLayout, QInputDialog, QPushButton
 import PyQt4.QtCore as QtCore
 
-import electrum_dash
-from electrum_dash import bitcoin
+import electrum_boli
+from electrum_boli import bitcoin
 
-from electrum_dash.account import BIP32_Account
-from electrum_dash.bitcoin import EncodeBase58Check, public_key_to_bc_address, bc_address_to_hash_160, xpub_from_pubkey
-from electrum_dash.i18n import _
-from electrum_dash.plugins import BasePlugin, hook, always_hook, run_hook
-from electrum_dash.transaction import Transaction, deserialize, is_extended_pubkey, x_to_xpub
-from electrum_dash.wallet import BIP32_HD_Wallet
-from electrum_dash.util import print_error, print_msg
-from electrum_dash.wallet import pw_decode, bip32_private_derivation, bip32_root
+from electrum_boli.account import BIP32_Account
+from electrum_boli.bitcoin import EncodeBase58Check, public_key_to_bc_address, bc_address_to_hash_160, xpub_from_pubkey
+from electrum_boli.i18n import _
+from electrum_boli.plugins import BasePlugin, hook, always_hook, run_hook
+from electrum_boli.transaction import Transaction, deserialize, is_extended_pubkey, x_to_xpub
+from electrum_boli.wallet import BIP32_HD_Wallet
+from electrum_boli.util import print_error, print_msg
+from electrum_boli.wallet import pw_decode, bip32_private_derivation, bip32_root
 
 from electrum_boli_gui.qt.util import *
 from electrum_boli_gui.qt.main_window import StatusBarButton

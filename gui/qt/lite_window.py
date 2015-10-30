@@ -8,28 +8,28 @@ try:
     import PyQt4.QtCore as QtCore
 
 except ImportError:
-    print "You need to have PyQT installed to run Electrum-DASH in graphical mode."
+    print "You need to have PyQT installed to run Electrum-BOLI in graphical mode."
     print "If you have pip installed try 'sudo pip install pyqt' if you are on Debian/Ubuntu try 'sudo apt-get install python-qt4'."
     sys.exit(0)
 
 from decimal import Decimal as D
-from electrum_dash.bitcoin import is_valid
-from electrum_dash.i18n import _
+from electrum_boli.bitcoin import is_valid
+from electrum_boli.i18n import _
 import decimal
 import json
 import os.path
 import random
 import re
 import time
-from electrum_dash.wallet import Wallet, WalletStorage
+from electrum_boli.wallet import Wallet, WalletStorage
 import webbrowser
 import history_widget_lite
 import receiving_widget
-from electrum_dash import util
+from electrum_boli import util
 import datetime
 
-from electrum_dash.version import ELECTRUM_VERSION as electrum_version
-from electrum_dash.util import format_satoshis, age
+from electrum_boli.version import ELECTRUM_VERSION as electrum_version
+from electrum_boli.util import format_satoshis, age
 
 from main_window import ElectrumWindow
 import shutil
@@ -251,8 +251,8 @@ class MiniWindow(QDialog):
         show_hist = self.config.get("gui_show_receiving",False)
         self.toggle_receiving_layout(show_hist)
 
-        self.setWindowIcon(QIcon(":icons/electrum_dash.png"))
-        self.setWindowTitle("Electrum-DASH")
+        self.setWindowIcon(QIcon(":icons/electrum_boli.png"))
+        self.setWindowTitle("Electrum-BOLI")
         self.setWindowFlags(Qt.Window|Qt.MSWindowsFixedSizeDialogHint)
         self.layout().setSizeConstraint(QLayout.SetFixedSize)
         self.setObjectName("main_window")
@@ -368,7 +368,7 @@ class MiniWindow(QDialog):
         unit = self.actuator.g.base_unit()
 
         self.balance_label.set_balance_text(amount, unit, quote_text)
-        self.setWindowTitle("Electrum-DASH %s - %s %s" % (electrum_version, amount, unit))
+        self.setWindowTitle("Electrum-BOLI %s - %s %s" % (electrum_version, amount, unit))
 
     def amount_input_changed(self, amount_text):
         """Update the number of Dash displayed."""
@@ -389,7 +389,7 @@ class MiniWindow(QDialog):
     def create_quote_text(self, btc_balance):
         """Return a string copy of the amount fiat currency the
         user has in Dash."""
-        from electrum_dash.plugins import run_hook
+        from electrum_boli.plugins import run_hook
         r = {}
         run_hook('get_fiat_balance_text', btc_balance, r)
         return r.get(0,'')
@@ -586,7 +586,7 @@ class ReceivePopup(QDialog):
         main_layout.addWidget(address_display)
 
         self.setMouseTracking(True)
-        self.setWindowTitle("Electrum-DASH - " + _("Receive Dash payment"))
+        self.setWindowTitle("Electrum-BOLI - " + _("Receive Dash payment"))
         self.setWindowFlags(Qt.Window|Qt.FramelessWindowHint|
                             Qt.MSWindowsFixedSizeDialogHint)
         self.layout().setSizeConstraint(QLayout.SetFixedSize)
@@ -647,7 +647,7 @@ class MiniActuator:
         """Set the inital fiat currency conversion country (USD/EUR/GBP) in
         the GUI to what it was set to in the wallet."""
         currency = self.g.config.get('currency')
-        # currency can be none when Electrum-DASH is used for the first
+        # currency can be none when Electrum-BOLI is used for the first
         # time and no setting has been created yet.
         if currency is not None:
             set_quote_currency(currency)
@@ -677,7 +677,7 @@ class MiniActuator:
         s.start()
         w = QDialog()
         w.resize(200, 70)
-        w.setWindowTitle('Electrum-DASH')
+        w.setWindowTitle('Electrum-BOLI')
         l = QLabel(_('Sending transaction, please wait.'))
         vbox = QVBoxLayout()
         vbox.addWidget(l)

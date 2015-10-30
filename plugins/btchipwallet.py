@@ -6,16 +6,16 @@ from struct import pack,unpack
 from sys import stderr
 from time import sleep
 
-import electrum_dash
+import electrum_boli
 from electrum_boli_gui.qt.password_dialog import make_password_dialog, run_password_dialog
-from electrum_dash.account import BIP32_Account
-from electrum_dash.bitcoin import EncodeBase58Check, DecodeBase58Check, public_key_to_bc_address, bc_address_to_hash_160
-from electrum_dash.i18n import _
-from electrum_dash.plugins import BasePlugin, hook
-from electrum_dash.transaction import deserialize
-from electrum_dash.wallet import BIP32_HD_Wallet, BIP32_Wallet
+from electrum_boli.account import BIP32_Account
+from electrum_boli.bitcoin import EncodeBase58Check, DecodeBase58Check, public_key_to_bc_address, bc_address_to_hash_160
+from electrum_boli.i18n import _
+from electrum_boli.plugins import BasePlugin, hook
+from electrum_boli.transaction import deserialize
+from electrum_boli.wallet import BIP32_HD_Wallet, BIP32_Wallet
 
-from electrum_dash.util import format_satoshis_plain, print_error, print_msg
+from electrum_boli.util import format_satoshis_plain, print_error, print_msg
 import hashlib
 import threading
 

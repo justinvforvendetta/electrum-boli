@@ -25,8 +25,8 @@ may be called from your php script.
 import socket, os
 from jsonrpclib.SimpleJSONRPCServer import SimpleJSONRPCServer, SimpleJSONRPCRequestHandler
 
-from electrum_dash.wallet import WalletStorage, Wallet
-from electrum_dash.commands import known_commands, Commands
+from electrum_boli.wallet import WalletStorage, Wallet
+from electrum_boli.commands import known_commands, Commands
 
 
 class RequestHandler(SimpleJSONRPCRequestHandler):

@@ -29,14 +29,14 @@ from urllib import quote
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 
-import electrum_dash
-from electrum_dash import bitcoin
-from electrum_dash.bitcoin import *
-from electrum_dash.mnemonic import Mnemonic
-from electrum_dash import version
-from electrum_dash.wallet import Multisig_Wallet, BIP32_Wallet
-from electrum_dash.i18n import _
-from electrum_dash.plugins import BasePlugin, run_hook, hook
+import electrum_boli
+from electrum_boli import bitcoin
+from electrum_boli.bitcoin import *
+from electrum_boli.mnemonic import Mnemonic
+from electrum_boli import version
+from electrum_boli.wallet import Multisig_Wallet, BIP32_Wallet
+from electrum_boli.i18n import _
+from electrum_boli.plugins import BasePlugin, run_hook, hook
 
 from electrum_boli_gui.qt.util import *
 from electrum_boli_gui.qt.qrcodewidget import QRCodeWidget
@@ -429,7 +429,7 @@ class Plugin(BasePlugin):
 
 
     def need_server(self, tx):
-        from electrum_dash.account import BIP32_Account
+        from electrum_boli.account import BIP32_Account
         # Detect if the server is needed
         long_id, short_id = self.get_user_id()
         xpub3 = self.wallet.master_public_keys['x3/']
@@ -614,7 +614,7 @@ class Plugin(BasePlugin):
         d.close()
         if self.window.pluginsdialog:
             self.window.pluginsdialog.close()
-        uri = "dash:" + self.billing_info['billing_address'] + "?message=TrustedCoin %d Prepaid Transactions&amount="%k + str(Decimal(v)/100000000)
+        uri = "boli:" + self.billing_info['billing_address'] + "?message=TrustedCoin %d Prepaid Transactions&amount="%k + str(Decimal(v)/100000000)
         self.is_billing = True
         self.window.pay_from_URI(uri)
         self.window.payto_e.setFrozen(True)
