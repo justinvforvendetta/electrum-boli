@@ -21,8 +21,8 @@ from electrum_dash.wallet import BIP32_HD_Wallet
 from electrum_dash.util import print_error, print_msg
 from electrum_dash.wallet import pw_decode, bip32_private_derivation, bip32_root
 
-from electrum_dash_gui.qt.util import *
-from electrum_dash_gui.qt.main_window import StatusBarButton
+from electrum_boli_gui.qt.util import *
+from electrum_boli_gui.qt.main_window import StatusBarButton
 
 try:
     from trezorlib.client import types
@@ -623,7 +623,7 @@ class TrezorQtHandler:
         self.done.set()
 
     def passphrase_dialog(self):
-        from electrum_dash_gui.qt.password_dialog import make_password_dialog, run_password_dialog
+        from electrum_boli_gui.qt.password_dialog import make_password_dialog, run_password_dialog
         d = QDialog()
         d.setModal(1)
         d.setLayout(make_password_dialog(d, None, self.message, False))

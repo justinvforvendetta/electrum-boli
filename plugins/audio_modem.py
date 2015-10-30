@@ -1,5 +1,5 @@
 from electrum_dash.plugins import BasePlugin, hook
-from electrum_dash_gui.qt.util import WaitingDialog, EnterButton
+from electrum_boli_gui.qt.util import WaitingDialog, EnterButton
 from electrum_dash.util import print_msg, print_error
 from electrum_dash.i18n import _
 

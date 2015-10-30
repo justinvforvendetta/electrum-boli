@@ -29,7 +29,7 @@ from electrum_dash import transaction
 from electrum_dash.plugins import BasePlugin, hook
 from electrum_dash.i18n import _
 
-from electrum_dash_gui.qt.transaction_dialog import show_transaction
+from electrum_boli_gui.qt.transaction_dialog import show_transaction
 
 import sys
 import traceback

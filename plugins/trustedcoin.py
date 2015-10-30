@@ -38,10 +38,10 @@ from electrum_dash.wallet import Multisig_Wallet, BIP32_Wallet
 from electrum_dash.i18n import _
 from electrum_dash.plugins import BasePlugin, run_hook, hook
 
-from electrum_dash_gui.qt.util import *
-from electrum_dash_gui.qt.qrcodewidget import QRCodeWidget
-from electrum_dash_gui.qt.amountedit import AmountEdit
-from electrum_dash_gui.qt.main_window import StatusBarButton
+from electrum_boli_gui.qt.util import *
+from electrum_boli_gui.qt.qrcodewidget import QRCodeWidget
+from electrum_boli_gui.qt.amountedit import AmountEdit
+from electrum_boli_gui.qt.main_window import StatusBarButton
 
 from decimal import Decimal
 

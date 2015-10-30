@@ -7,7 +7,7 @@ from sys import stderr
 from time import sleep
 
 import electrum_dash
-from electrum_dash_gui.qt.password_dialog import make_password_dialog, run_password_dialog
+from electrum_boli_gui.qt.password_dialog import make_password_dialog, run_password_dialog
 from electrum_dash.account import BIP32_Account
 from electrum_dash.bitcoin import EncodeBase58Check, DecodeBase58Check, public_key_to_bc_address, bc_address_to_hash_160
 from electrum_dash.i18n import _
