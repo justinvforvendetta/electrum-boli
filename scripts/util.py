@@ -7,7 +7,7 @@ from electrum_boli.network import filter_protocol, parse_servers
 def get_peers():
     # 1. start interface and wait for connection
     q = Queue.Queue()
-    interface = electrum_boli.Interface('ecdsa.net:110:s', q)
+    interface = electrum_boli.Interface('electrum-boli.xyz:50001:t', q)
     interface.start()
     i, r = q.get()
     if not interface.is_connected():
