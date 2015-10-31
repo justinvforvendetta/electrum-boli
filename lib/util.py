@@ -205,7 +205,7 @@ block_explorer_info = {
     'cryptoid.info': ('https://chainz.cryptoid.info/boli/',
                           {'tx.dws?': 'transactions', 'address.dws?': 'address'}),
     'Blockchain.info': ('https://blockchain.info',
--                         {'tx': 'tx', 'addr': 'address'}),
+                          {'tx': 'tx', 'addr': 'address'}),
 }
 
 def block_explorer(config):
