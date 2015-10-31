@@ -202,8 +202,10 @@ def time_difference(distance_in_time, include_seconds):
         return "over %d years" % (round(distance_in_minutes / 525600))
 
 block_explorer_info = {
-    'Biteasy.com': ('https://chainz.cryptoid.info/boli/',
+    'cryptoid.info': ('https://chainz.cryptoid.info/boli/',
                         {'tx.dws?': 'transactions', 'address.dws?': 'address'}),
+    'Blockchain.info': ('https://blockchain.info',
+-                        {'tx': 'tx', 'addr': 'address'}),
 }
 
 def block_explorer(config):
